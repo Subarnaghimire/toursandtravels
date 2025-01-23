@@ -1,0 +1,323 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  
+  nav .logo{
+    width: 50px;
+    margin: 2vh;
+    margin-left: 3%;
+    margin-top: 1%;
+  }
+  
+  .navbar{
+    margin-right: 3%;
+  }
+  
+  .navbar a{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;   
+    text-decoration: none;
+    transition: ease 0.40s;
+  }
+  
+  .ho{
+    margin-right: 30%;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;   
+    text-decoration: none;
+    transition: ease 0.40s;
+  }
+  
+  .ho .home{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+  }
+  
+  .ho .package{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+  }
+  
+  .ho .booking{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+  }
+  .ho .hotel{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+  }
+  
+  .ho a:hover,.ho a.active{
+    background: purple;
+    color: black;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+  }
+  .navbar .signup-btn {
+    display: inline-block;
+    color: rgb(255, 248, 248);
+    background-color: rgb(18, 18, 18);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+    margin-right: 10px;
+  }
+  
+  .navbar .login-btn {
+    display: inline-block;
+    color: rgb(255, 248, 248);
+    background-color: rgb(18, 18, 18);
+    border-radius: 30px;
+    transition: ease 0.30s;
+    padding: 10px 22px;
+  }
+  
+  .navbar .signup-btn:hover, .navbar .login-btn:hover {
+    display: inline-block;
+    transform: scale(1.0);
+    color: rgb(255, 255, 255);
+    background-color: rgb(14, 13, 13);
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.4);
+    border-radius: 20px;
+    padding: 10px 30px;
+  }
+
+.background{
+    position: relative;
+    background-size: 100%;
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.5)), url("back_image.jpg");
+}
+
+.title {
+    text-decoration: none;
+    text-shadow:20px 10px 30px #fffefe;
+    font-size: 4vh;
+    color: rgb(0, 0, 0);
+    padding: 190px 1px;
+    margin-top: 10vh;
+    text-align: center;
+    vertical-align: center;
+  }
+  
+  .title h1 {
+    font-size: 10vh;
+    transition: ease 0.3s;
+    padding-bottom: 10px;
+  }
+  
+  .title h1:hover {
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgb(26, 25, 25);
+  }
+  
+  .button {
+    display: inline-block;
+    margin-top: 5vh;
+    font-size: 25px;
+    padding: 10px 30px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 20px;
+    transition: ease 0.30s;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(9, 233, 84);
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.4);
+    padding: 10px 30px;
+  }
+  
+  .text h2 {
+    font-size: 40px;
+    font-weight: 650;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+  }
+  
+
+.rowitems{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,auto));
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px ;
+    margin-right: 30px;
+    margin-bottom:10px ;
+}
+
+
+.container-box{
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 50px 10px;
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+}
+
+.container-image img{
+    height: 200px;
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.container-box h4{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 550;
+}
+
+.container-box p{
+    font-size: 16px;
+    color: #565353;
+}
+
+.container-box:hover{
+    transform: translateX(3px);
+    box-shadow: 5px 20px 50px rgba(78, 78, 78, 0.1);
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+
+.footer{
+    margin-top: 80px;
+    background-color: rgb(73, 21, 74);
+}
+
+.foot{
+    padding: 20px 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.footlinks h4{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footlink_social h4{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footlinks ul li{
+    margin-bottom: 17px;
+    color: white;
+}
+
+
+.social a{
+    font-size: 25px;
+    margin: 4px;
+    height: 40px;
+    width: 40px;
+    color: rgb(21, 74, 74);
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: ease 0.30s;
+}
+
+.social a:hover{
+    transform: scale(1.2);
+}
+
+.end{
+    text-align: center;
+    background-color: rgb(77, 51, 77);
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+.end p{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.footlinks a{
+    color:#fffefe;
+}
+.footlinks li :hover{
+    text-decoration: underline ;
+    transform: scale(1.2);
+    transition: ease 0.30s;
+    color:#e1d4d4
+
+
+}
+.footlinks li :active{
+    color:#090909;
+}
+
+.profile{
+  text-align:right;
+  margin-right: 80px;
+}
+
+.profile i{
+  width: 40px;
+  font-size: 1.5em;
+}
+
+.profile i:hover{
+  cursor: pointer;
+}  

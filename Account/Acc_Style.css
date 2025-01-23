@@ -1,0 +1,380 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+nav .logo{
+  width: 50px;
+  margin: 2vh;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+.navbar{
+  margin-right: 3%;
+}
+
+.navbar a{
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 500;   
+  text-decoration: none;
+  transition: ease 0.40s;
+}
+
+.ho{
+  margin-right: 30%;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 500;   
+  text-decoration: none;
+  transition: ease 0.40s;
+}
+
+.ho .home{
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+}
+
+.ho .package{
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+}
+
+.ho .booking{
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+}
+.ho .hotel{
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+}
+
+.ho a:hover,.ho a.active{
+  background: purple;
+  color: black;
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 5px;
+}
+.navbar .signup-btn {
+  display: inline-block;
+  color: rgb(255, 248, 248);
+  background-color: rgb(18, 18, 18);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+  margin-right: 10px;
+}
+
+.navbar .login-btn {
+  display: inline-block;
+  color: rgb(255, 248, 248);
+  background-color: rgb(18, 18, 18);
+  border-radius: 30px;
+  transition: ease 0.30s;
+  padding: 10px 22px;
+}
+
+.navbar .signup-btn:hover, .navbar .login-btn:hover {
+  display: inline-block;
+  transform: scale(1.0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 13, 13);
+  box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.4);
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+
+.profile{
+  text-align:right;
+  margin-right: 80px;
+}
+.profile i{
+  width: 40px;
+  font-size: 25px;
+}
+.profile i:hover{
+cursor: pointer;
+}   
+.Dassh h4{
+    text-align: center;
+}
+.Dassh h5{
+    text-align: center;
+}
+
+.Dassh {
+    background: #F4F4F6;
+    width: 15.6vw;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 15vw;
+    min-height: 60vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  7px 4px 23px 0px rgba(0, 0, 0, 0.2);
+  }
+.Dassh .userl{
+    width: 40px;
+    margin: 2vh;
+    margin-left: 3%;
+    margin-top: 1%;
+    align-self: center;
+}
+  .Dassh ul{
+    padding-top: 15px;
+  }
+  .Dassh li {
+    width: 13vw;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    margin-left: 20px;
+    color: rgb(16, 16, 16);
+    border-radius: 9px;
+    align-items: center;
+  }
+  
+  .Dassh li:hover {
+    background-color:cornsilk;
+  }
+    
+  .Dassh ul li a:hover {
+    color: rgb(41, 40, 40);
+  }
+  
+  li img{
+    height: 30px;
+    width:  30px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }  
+
+  .container .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 83.2vw;
+    height: 8vh;
+    background: #F4F4F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .container img{
+    height: 30px;
+    width:  30px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }  
+  
+  .container .header .nav .user {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+  }
+  .container {
+    position: absolute;
+    right: 0;
+    width: 82.2vw;
+    height: 100vh;
+    background: #F4F4F6;
+  }
+
+  .container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container .content .card {
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+  }
+
+
+  .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .button {
+    margin-top: 2px;
+    font-size: 19px;
+    padding: 7px 21px;
+    color:  rgb(210, 75, 75);
+    background-color: transparent;
+    border-radius: 10px;
+    transition: ease 0.30s;
+  }
+
+  .button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(210, 75, 75);
+    box-shadow: 5px 10px 30px rgba(11, 11, 11, 0.4);
+    padding: 7px 21px;
+  }
+
+
+.footer{
+    margin-top: 80px;
+    background-color: rgb(73, 21, 74);
+    position:sticky;
+    width: 100%;
+    
+}
+
+.foot{
+    padding: 20px 0;
+}
+
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.footlinks h4{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footlink_social h4{
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footlinks ul li{
+    margin-bottom: 17px;
+    color: white;
+}
+
+
+.social a{
+    font-size: 25px;
+    margin: 4px;
+    height: 40px;
+    width: 40px;
+    color: rgb(21, 74, 74);
+    background-color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    transition: ease 0.30s;
+}
+
+.social a:hover{
+    transform: scale(1.2);
+}
+
+.end{
+    text-align: center;
+    background-color: rgb(77, 51, 77);
+    padding-top: 7px;
+    padding-bottom: 10px;
+}
+
+.end p{
+    font-size: 15px;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.footlinks a{
+    color:#fffefe;
+}
+.footlinks li :hover{
+    text-decoration: underline ;
+    transform: scale(1.2);
+    transition: ease 0.30s;
+    color:#e1d4d4
+
+
+}
+.footlinks li :active{
+    color:#090909;
+}

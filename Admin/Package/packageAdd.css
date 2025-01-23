@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  body {
+    min-height: 100vh;
+  }
+  a {
+    text-decoration: none;
+  }
+  li {
+    list-style: none;
+  }
+  .user a{
+    font-weight: bold;
+    color:#45174e
+  }
+  h1,
+  h2 {
+    color: #444;
+  }
+  h3 {
+    color: #631371;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 15px;
+    background: rgb(84, 83, 83);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 12px 10px 12px;
+    text-align: center;
+    transition: ease 0.20s;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    color: #631371;
+    background: white;
+    padding: 8px 8px;
+    border: 2px solid #1bde6c;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+  }
+  table {
+    padding: 11px ;
+    margin-left: 20px;
+  
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 5px;
+  }
+  .Dassh {
+    position: fixed;
+    background: #F4F4F6;
+    width: 15.6vw;
+    border-radius: 10px;
+    margin-right: 15vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  7px 4px 23px 0px rgba(0, 0, 0, 0.2);
+  }
+  .Dassh ul{
+    padding-top: 15px;
+  }
+  .Dassh li {
+    width: 13vw;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    margin-left: 20px;
+    color: black;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+  }
+
+  .Dassh .hype {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  } 
+
+  .Dassh .hype span{
+    color : #631371;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+
+  .hype img {
+    margin-bottom: 10px; 
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  .Dassh li:hover {
+    background-color: rgb(224, 222, 213);
+  }
+  
+  .Dassh ul li a:hover {
+    color: red;
+  }
+  
+  li img{
+    height: 30px;
+    width:  30px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+.container .header {
+position: fixed;
+top: 0;
+right: 0;
+width: 83.2vw;
+height: 8vh;
+background: #F4F4F6;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+.container .header .nav .user {
+flex: 1;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 30px;
+}
+
+.container {
+position: absolute;
+right: 0;
+width: 82.2vw;
+height: 100vh;
+background: #F4F4F6;
+}
+.container .content {
+position: relative;
+margin-top: 100px;
+min-height: 90vh;
+background: #F4F4F6;
+}
+
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+background-color: #f5f5f5;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+max-width: 500px;
+margin: 0 auto;
+}
+
+label {
+margin-bottom: 10px;
+font-weight: bold;
+}
+
+input,
+select,
+textarea {
+padding: 10px;
+border: none;
+border-radius: 5px;
+margin-bottom: 20px;
+width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type="number"] {
+appearance: textfield;
+}
+
+textarea {
+height: 200px;
+}
+
+button[type="submit"] {
+background-color: #3498db;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+background-color: #2980b9;
+}
+
+
+@media screen and (max-width: 1050px) {
+.Dassh li {
+font-size: 18px;
+}
+}
+@media screen and (max-width: 940px) {
+.Dassh li span {
+display: none;
+}
+.Dassh {
+align-items: center;
+}
+.Dassh li:hover {
+background: #f05462;
+padding: 8px 38px;
+border: 2px solid white;
+}
+}
+@media screen and (max-width:536px) {
+.hype h1 {
+font-size: 16px;
+}
+.container .content .cards {
+justify-content: center;
+}
+.Dassh li img {
+width: 30px;
+height: 30px;
+}
+.container .content .content-2 .recent-payments table th:nth-child(2),
+.container .content .content-2 .recent-payments table td:nth-child(2) {
+display: none;
+}
+}

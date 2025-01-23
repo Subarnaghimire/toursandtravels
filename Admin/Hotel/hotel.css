@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+body {
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.user a{
+  font-weight: bold;
+  color:#45174e
+}
+h1,
+h2 {
+  color: #444;
+}
+h3 {
+  color: #631371;
+}
+.btn {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 15px;
+  background: rgb(84, 83, 83);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 12px 10px 12px;
+  text-align: center;
+  transition: ease 0.20s;
+}
+.btn:hover {
+  transform: scale(1.1);
+  color: #631371;
+  background: white;
+  padding: 8px 8px;
+  border: 2px solid #1bde6c;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 10px;
+  border-bottom: 2px solid #999;
+}
+table {
+  padding: 11px ;
+  margin-left: 20px;
+
+}
+th,
+td {
+  text-align: left;
+  padding: 5px;
+}
+.Dassh {
+  position: fixed;
+  background: #F4F4F6;
+  width: 15.6vw;
+  border-radius: 10px;
+  margin-right: 15vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow:  7px 4px 23px 0px rgba(0, 0, 0, 0.2);
+}
+.Dassh ul{
+  padding-top: 15px;
+}
+.Dassh li {
+  width: 13vw;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  margin-left: 20px;
+  color: black;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+}
+
+.Dassh .hype {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+.Dassh .hype span{
+  color : #631371;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.Dassh ul:last-child{
+  position: absolute;
+  width: 100%;
+  padding-bottom: 2px;
+}
+
+.hype img {
+  margin-bottom: 10px; 
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.Dassh li:hover {
+  background-color: rgb(224, 222, 213);
+}
+  
+.Dassh ul li a:hover {
+  color: red;
+}
+
+li img{
+  height: 30px;
+  width:  30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+i.fas.fa-trash-alt {
+  color: #dc3545; 
+  margin-left: 5px;
+}
+
+i.fas.fa-trash-alt:hover {
+  color: red; 
+}
+
+i.fas.fa-pencil-alt:hover {
+  color: blue; 
+}
+
+i.fas.fa-pencil-alt {
+  color: #007bff; 
+}
+
+i.fas {
+  font-size: 1.4rem;
+}
+
+.Dassh ul:last-child{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.container .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 83.2vw;
+  height: 8vh;
+  background: #F4F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+
+
+.container .header .nav .user {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+}
+.container {
+  position: absolute;
+  right: 0;
+  width: 82.2vw;
+  height: 100vh;
+  background: #F4F4F6;
+}
+.container .content {
+  position: relative;
+  margin-top: 100px;
+  min-height: 90vh;
+  background: #F4F4F6;
+}
+.container .content .cards {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .content .cards .card {
+  width: 250px;
+  height: 150px;
+  border-radius: 15px;
+  background: rgb(224, 222, 213);
+  box-shadow: 8px 15px 40px rgba(11, 11, 11, 0.4);
+  margin: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container .content .content-2 {
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container .content .content-2 .pack {
+  height: 350px;
+  flex: 5;
+  overflow-y: scroll;
+  border-radius: 10px;
+  background: rgb(224, 222, 213);
+  margin: 0 25px 25px 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+}
+
+.pack::-webkit-scrollbar {
+  display: none;
+}
+
+.search_box{
+  text-align: right;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display:block;
+  align-items: center;
+  border-radius: 60px;
+  margin-right: 150px;
+}
+
+.search_box input[type=text] {
+  flex: 1;
+  outline: none;
+  color:black;
+  padding: 8px;
+  border: none;
+  width: 250px;
+  background-color: rgb(242, 239, 239);
+  font-size: 15px;
+}
+.add_package{
+  padding: 8px 10px;
+  background-color: purple;
+  color: white;
+  font-weight: solid black;
+  border-radius: 15px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px black;
+}
+.add_package:hover{
+   box-shadow: 0px 0px 10px 0px black;
+}
+.add_package:active{
+   background-color: rgb(9, 145, 169) ;
+}
+@media screen and (max-width: 1050px) {
+  .Dassh li {
+      font-size: 18px;
+  }
+}
+@media screen and (max-width: 940px) {
+  .Dassh li span {
+      display: none;
+  }
+  .Dassh {
+      align-items: center;
+  }
+  .Dassh li:hover {
+      background: #f05462;
+      padding: 8px 38px;
+      border: 2px solid white;
+  }
+}
+@media screen and (max-width:536px) {
+  .hype h1 {
+      font-size: 16px;
+  }
+  .container .content .cards {
+      justify-content: center;
+  }
+  .Dassh li img {
+      width: 30px;
+      height: 30px;
+  }
+  .container .content .content-2 .recent-payments table th:nth-child(2),
+  .container .content .content-2 .recent-payments table td:nth-child(2) {
+      display: none;
+  }
+}

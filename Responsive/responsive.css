@@ -1,0 +1,266 @@
+.burger{
+    width: 0px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    display: none;
+}
+
+
+/* media queries */
+
+@media only screen and (max-width: 1297px){
+    .ho{
+  
+        margin-right: 10%;
+    }
+    .search_box input[type=text] {
+       
+        width: 200px;
+    }
+
+    }
+    @media only screen and (max-width: 1105px)
+    {
+    .search_box input[type=text] {
+       
+        width: 120px;
+    }
+}
+@media only screen and (max-width: 993px)
+    {
+        .ho .home{
+            padding: 10px 10px;
+          }
+          .ho .package{
+            padding: 10px 10px;
+          }
+          .ho .booking{
+            padding: 10px 10px;
+          } 
+          .ho .hotel{
+            padding: 10px 10px;
+          }  
+     }
+
+@media only screen and (max-width: 993px)
+     {
+         .ho .home{
+             padding: 10px 7px;
+           }
+           .ho .package{
+             padding: 10px 7px;
+           }
+           .ho .booking{
+             padding: 10px 7px;
+           } 
+           .ho .hotel{
+             padding: 10px 7px;
+           }  
+      }
+
+      @media only screen and (max-width: 850px)
+      {
+          .ho .home{
+              padding: 10px 5px;
+            }
+            .ho .package{
+              padding: 10px 5px;
+            }
+            .ho .booking{
+              padding: 10px 5px;
+            } 
+            .ho .hotel{
+              padding: 10px 5px;
+            }  
+       }
+       
+        /* Ham */
+       @media only screen and (max-width: 830px)
+       {
+        .ho .home{
+            padding: 6px 
+          }
+          .ho .package{
+            padding: 6px;
+          }
+          .ho .booking{
+            padding: 6px;
+          } 
+          .ho .hotel{
+            padding: 6px;
+          }
+          .height
+          {
+            margin-top: 312px;
+          }
+          nav .logo {
+            width: 33px;
+            margin-top: 11px;
+        }
+
+        .ho {
+            display: flex;
+            flex-direction: column;
+            padding: 1px 22px;
+        }
+        .search_box
+        {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            margin-left: 65px;
+        } 
+        .profile{
+          float: left;
+          margin-top: 10px;
+        }
+        .navbar
+        {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+        }
+
+        .wholenav
+            {
+                display: inline;
+                flex-direction: column;
+            }
+            .wholenav
+            {
+              height: 0;
+            }
+            .hnav {
+                width: 100%;
+                height:287px;
+            }
+
+            .burger{
+              width: 40px;
+              display: block;
+              top: 9px;
+          }   
+        
+          .hide
+          {
+            opacity: 0%;
+          }
+          .show
+          {
+            opacity: 100%;
+          }
+       }
+
+
+
+
+/* for package page  */
+
+@media (max-width:1125px)
+{
+
+      .location_box{
+        margin-right: 70px;
+        margin-left: 70px;
+       
+    }
+}
+
+
+@media (max-width:919px)
+{
+    .location_box{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width:1015px)
+{
+    .location i{
+        
+        grid-template-columns: 5px 6fr;
+        font-size: 15px;
+        margin-right: 15px;
+    
+    }
+}
+@media (max-width:929px)
+{
+    .location i{
+        
+        grid-template-columns: 5px 6fr;
+        font-size: 10px;
+        margin-right: 10px;  
+    }
+    .location h3 {
+        font-size: 22px;
+        text-align: left;
+        width: 100%;
+        margin-left: 7px;
+            }
+        
+            
+        /* price  */
+        .location_name p {
+            margin-left: 3px;
+            margin-right: 0px;
+        }
+        
+        .location_price p {
+            font-size: 8px;
+        }
+        .location_name p {
+            font-size: 18px;
+}
+}
+
+@media (max-width:770px)
+{
+    .location i{
+        
+      
+        font-size: 5px;
+        margin-right: 5px;  
+    }
+    .location h3 {
+        font-size: 10px;
+        text-align: left;
+        width: 100%;
+        margin-left: 7px;
+            }
+    
+            /* price */
+            .location_name p {
+                font-size: 10px;
+}
+.location_price p {
+    font-size: 1px;
+}
+.location_box{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+}
+@media (max-width:528px)
+{
+.location_price p {
+        font-size: 1px;
+}
+.location_box{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.profile
+{
+    width: 0px;
+    height: 0px;
+}
+.top_navbar{
+    position: block
+    ;
+    
+}
+}
+
