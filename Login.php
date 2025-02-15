@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html>\
+<html>
 <head>
     <script type="text/javascript" src="display/jquery.min.js"></script>
     <script type="text/javascript" src="display/toastr.min.js"></script>

@@ -9,7 +9,7 @@ if (!isset($_SESSION['id'])) {
 require_once("Backend/connection.php");
 require_once("Backend/getData.php");
 
-define('KHALTI_SECRET_KEY', '0bdd928dc04844d2a757b638d5ec8fc4');
+define('KHALTI_SECRET_KEY', '3c8e1137eac34775b370fc04199f6cff');
 
 // Function to initialize Khalti payment
 function initializeKhaltiPayment($amount, $purchase_order_id)
@@ -18,7 +18,7 @@ function initializeKhaltiPayment($amount, $purchase_order_id)
 
     $data = array(
         'return_url' => 'http://localhost/ToursAndTravels/mybookings.php?payment_success=true&booking_id=' . $purchase_order_id,
-        'website_url' => 'https://your-website.com',
+        'website_url' => 'http://localhost/ToursAndTravels',
         'amount' => $amount,
         'purchase_order_id' => $purchase_order_id,
         'purchase_order_name' => 'Hotel Booking',
@@ -65,7 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_khalti'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,13 +78,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_khalti'])) {
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-</head>
-<style>
-    .status--paid {
-    background-color: #cce5ff;
-    color: #004085;
+    <style>
+        .status--paid {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+
+        p {
+            color: black;
+        }
+
+        /* Enhanced Khalti Logo Styles */
+
+
+
+        /* Container styling */
+        .khalti-pay-btn {
+    padding: 12px 20px; /* Increase padding for a bigger button */
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background-color: #1e88e5; /* Set a beautiful background color */
+    color: white; /* White text color */
+    font-size: 16px; /* Set font size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 30px; /* Rounded corners for the button */
+    cursor: pointer; /* Change the cursor to a pointer to indicate it's clickable */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition effect */
 }
-</style>
+
+.khalti-pay-btn:hover {
+    background-color: #1565c0; /* Darken background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.khalti-pay-btn:active {
+    background-color:rgb(30, 3, 28);
+    transform: scale(0.98); /* Shrink button slightly on click */
+}
+
+.khalti-pay-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #1976d2; 
+}
+
+
+        .khalti-pay-btn:focus {
+            outline: none;
+        }
+
+        .receipt-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .receipt-download a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
 <body>
     <nav class="wholenav hnav">
         <img src="logo.png" class="logo" alt="Logo" title="Holiday Hype" onclick="window.location.reload();">
@@ -134,21 +195,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pay_khalti'])) {
                                 </span>
                             </div>
                             <div>
-                                <p>Package: <?php echo htmlspecialchars($row['PackageName']); ?></p>
-                                <p>Booked Date: <?php echo date('F j, Y', strtotime($row['BookedDate'])); ?></p>
-                                <p>Amount: NPR <?php echo number_format($row['Amount'], 2); ?></p>
+                                <p><strong>Package:</strong> <?php echo htmlspecialchars($row['PackageName']); ?></p>
+                                <p><strong>Booked Date:</strong> <?php echo date('F j, Y', strtotime($row['BookedDate'])); ?>
+                                </p>
+                                <p><strong>Amount:</strong> NPR <?php echo number_format($row['Amount'], 2); ?></p>
                             </div>
                             <?php if ($row['status'] === 'approved'): ?>
                                 <form action="" method="POST">
                                     <input type="hidden" name="room_price" value="<?php echo $row['Amount'] * 100; ?>">
                                     <input type="hidden" name="booking_id" value="<?php echo $row['BookingsId']; ?>">
-                                    <button type="submit" name="pay_khalti" class="khalti-pay-btn"
-                                        style="border: none; background: none; padding: 0;">
-                                        <img src="LandingPage/khaltiLogo.png" alt="Khalti Logo" class="khalti-logo"
-                                            style="height: 100px; width: 200px; border: none;">
+                                    <button type="submit" name="pay_khalti" class="khalti-pay-btn">
+                                        <!-- <img src="LandingPage/khaltiLogo.png" alt="Khalti Logo" class="khalti-logo"> -->
+                                         Pay With Khalti
                                     </button>
-
                                 </form>
+                            <?php endif; ?>
+                            <?php if ($row['status'] === 'paid'): ?>
+                                <div class="receipt-download">
+                                    <a href="generate_receipt.php?booking_id=<?php echo $row['BookingsId']; ?>"
+                                        class="download-receipt-btn">
+                                        <i class="fa-solid fa-download"></i> Download Receipt
+                                    </a>
+                                </div>
                             <?php endif; ?>
                         </li>
                     <?php endwhile; ?>

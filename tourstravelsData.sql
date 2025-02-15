@@ -170,9 +170,9 @@ ALTER TABLE `Bookings`
 --
 -- Indexes for table `CustomPackage`
 --
-ALTER TABLE `CustomPackage`
-  ADD PRIMARY KEY (`Package_id`),
-  ADD KEY `User_Id` (`User_Id`);
+-- ALTER TABLE `CustomPackage`
+--   ADD PRIMARY KEY (`Package_id`),
+--   ADD KEY `User_Id` (`User_Id`);
 
 --
 -- Indexes for table `Feedback`
@@ -219,8 +219,8 @@ ALTER TABLE `Bookings`
 --
 -- AUTO_INCREMENT for table `CustomPackage`
 --
-ALTER TABLE `CustomPackage`
-  MODIFY `Package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+-- ALTER TABLE `CustomPackage`
+--   MODIFY `Package_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `Feedback`
@@ -266,8 +266,8 @@ ALTER TABLE `Bookings`
 --
 -- Constraints for table `CustomPackage`
 --
-ALTER TABLE `CustomPackage`
-  ADD CONSTRAINT `CustomPackage_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `User` (`User_Id`);
+-- ALTER TABLE `CustomPackage`
+--   ADD CONSTRAINT `CustomPackage_ibfk_1` FOREIGN KEY (`User_Id`) REFERENCES `User` (`User_Id`);
 
 --
 -- Constraints for table `Feedback`
@@ -285,3 +285,226 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- <?php 
+-- session_start();
+-- if(!isset($_SESSION['idz'])){
+--     header("Location: ../index.php");
+-- }
+-- require_once "../Backend/getCount.php";
+-- ?>
+-- <!DOCTYPE html>
+-- <html lang="en">
+-- <head>
+--     <script src="../display/sweetalert.min.js"></script>
+--     <script src="confirm.js"></script>
+--     <meta charset="UTF-8">
+--     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+--     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+--     <link rel="stylesheet" href="Dashboard/dash.css">
+--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+--     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+--     <title>Admin Panel</title>
+--     <style>
+--         .cards {
+--             display: grid;
+--             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+--             gap: 20px;
+--             margin-bottom: 30px;
+--         }
+--         .card {
+--             background: white;
+--             padding: 20px;
+--             border-radius: 10px;
+--             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+--             display: flex;
+--             justify-content: space-between;
+--             align-items: center;
+--             transition: transform 0.3s;
+--         }
+--         .card:hover {
+--             transform: translateY(-5px);
+--         }
+--         .analytics-grid {
+--             display: grid;
+--             grid-template-columns: repeat(2, 1fr);
+--             gap: 20px;
+--             margin-top: 30px;
+--         }
+--         .analytics-card {
+--             background: white;
+--             padding: 20px;
+--             border-radius: 10px;
+--             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+--         }
+--         .analytics-card h2 {
+--             margin-bottom: 20px;
+--             color: #333;
+--             font-size: 1.2em;
+--         }
+--         .list-item {
+--             display: flex;
+--             justify-content: space-between;
+--             padding: 10px 0;
+--             border-bottom: 1px solid #eee;
+--         }
+--         .list-item:last-child {
+--             border-bottom: none;
+--         }
+--         .chart-container {
+--             height: 300px;
+--             margin-top: 20px;
+--         }
+--         .badge {
+--             background: #e3f2fd;
+--             color: #1976d2;
+--             padding: 5px 10px;
+--             border-radius: 20px;
+--             font-size: 0.8em;
+--         }
+--     </style>
+-- </head>
+-- <body>
+--     <!-- Your existing sidebar code remains the same -->
+    
+--     <div class="container">
+--         <div class="header">
+--             <div class="nav">
+--                 <div class="user">
+--                     <a>Admin Dashboard</a>
+--                 </div>
+--             </div>
+--         </div>
+        
+--         <div class="content">
+--             <!-- Summary Cards -->
+--             <div class="cards">
+--                 <div class="card">
+--                     <div class="box">
+--                         <h1><?php echo getUserCount();?></h1>
+--                         <h3>Total Users</h3>
+--                     </div>
+--                     <div class="icon-case">
+--                         <i class="fas fa-users fa-2x" style="color: #1976d2;"></i>
+--                     </div>
+--                 </div>
+--                 <div class="card">
+--                     <div class="box">
+--                         <h1><?php echo getBookingCount();?></h1>
+--                         <h3>Total Bookings</h3>
+--                     </div>
+--                     <div class="icon-case">
+--                         <i class="fas fa-calendar-check fa-2x" style="color: #388e3c;"></i>
+--                     </div>
+--                 </div>
+--                 <div class="card">
+--                     <div class="box">
+--                         <h1><?php echo getPackageCount();?></h1>
+--                         <h3>Total Packages</h3>
+--                     </div>
+--                     <div class="icon-case">
+--                         <i class="fas fa-box fa-2x" style="color: #f57c00;"></i>
+--                     </div>
+--                 </div>
+--             </div>
+
+--             <!-- Analytics Grid -->
+--             <div class="analytics-grid">
+--                 <!-- Most Booked Packages -->
+--                 <div class="analytics-card">
+--                     <h2>Most Popular Packages</h2>
+--                     <?php
+--                     $popular_packages = getMostBookedPackages();
+--                     while($package = mysqli_fetch_assoc($popular_packages)) {
+--                         echo '<div class="list-item">
+--                                 <span>'.$package['PackageName'].'</span>
+--                                 <span class="badge">'.$package['booking_count'].' bookings</span>
+--                               </div>';
+--                     }
+--                     ?>
+--                 </div>
+
+--                 <!-- Top Customers -->
+--                 <div class="analytics-card">
+--                     <h2>Top Customers</h2>
+--                     <?php
+--                     $top_customers = getTopCustomers();
+--                     while($customer = mysqli_fetch_assoc($top_customers)) {
+--                         echo '<div class="list-item">
+--                                 <span>'.$customer['Username'].'</span>
+--                                 <span class="badge">'.$customer['booking_count'].' bookings</span>
+--                               </div>';
+--                     }
+--                     ?>
+--                 </div>
+
+--                 <!-- Recent Signups -->
+--                 <div class="analytics-card">
+--                     <h2>Recent Signups</h2>
+--                     <?php
+--                     $recent_signups = getRecentSignups();
+--                     while($user = mysqli_fetch_assoc($recent_signups)) {
+--                         echo '<div class="list-item">
+--                                 <span>'.$user['Username'].'</span>
+--                               </div>';
+--                     }
+--                     ?>
+--                 </div>
+
+--                 <!-- Monthly Bookings Chart -->
+--                 <div class="analytics-card">
+--                     <h2>Monthly Bookings</h2>
+--                     <div class="chart-container">
+--                         <canvas id="bookingsChart"></canvas>
+--                     </div>
+--                 </div>
+--             </div>
+--         </div>
+--     </div>
+
+--     <script>
+--     // Initialize Monthly Bookings Chart
+--     <?php
+--     $monthly_bookings = getMonthlyBookings();
+--     $labels = [];
+--     $data = [];
+--     while($row = mysqli_fetch_assoc($monthly_bookings)) {
+--         $labels[] = date('M Y', strtotime($row['month'].'-01'));
+--         $data[] = $row['booking_count'];
+--     }
+--     ?>
+
+--     new Chart(document.getElementById('bookingsChart'), {
+--         type: 'line',
+--         data: {
+--             labels: <?php echo json_encode(array_reverse($labels)); ?>,
+--             datasets: [{
+--                 label: 'Number of Bookings',
+--                 data: <?php echo json_encode(array_reverse($data)); ?>,
+--                 borderColor: '#1976d2',
+--                 tension: 0.1,
+--                 fill: true,
+--                 backgroundColor: 'rgba(25, 118, 210, 0.1)'
+--             }]
+--         },
+--         options: {
+--             responsive: true,
+--             maintainAspectRatio: false,
+--             plugins: {
+--                 legend: {
+--                     display: false
+--                 }
+--             },
+--             scales: {
+--                 y: {
+--                     beginAtZero: true,
+--                     ticks: {
+--                         stepSize: 1
+--                     }
+--                 }
+--             }
+--         }
+--     });
+--     </script>
+-- </body>
+-- </html>
