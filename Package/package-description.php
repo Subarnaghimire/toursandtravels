@@ -116,8 +116,6 @@
                 if ($user_has_booked == "pending") {
                     $button_text = 'submitted';
                     echo "<div style='text-align: center ; color: blue'>Your Booking is pending for approval.</div>";
-                } else if ($user_has_booked =="rejected"){
-                    echo "<div style='text-align: center ; color: red'>Your Booking is Rejected</div>";
                 } else if ($user_has_booked == "approved"){
                     echo "<div style='text-align: center ; color: green'>Your Booking is Approved</div>";
                 } else {

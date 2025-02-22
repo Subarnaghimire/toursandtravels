@@ -53,13 +53,16 @@
             </ul>
             <img src="Responsive/ham.png" alt="hambeger" class="burger" >
         </nav>   
-
+        
         <div class="background">
-            <div class="title" style="color:aqua;">
-                <h1>Lets enjoy your trip with Holiday Hype</h1>
-                <p><b>Thinking of taking break form your daily boring life and want to have a special quality time with your loved ones?</b></p>
-                <a class="button" href="suggestionLocation.php" >Start Now ></a>
+            <div class="content-left">
+                <div class="title" style="color:aqua;">
+                    <h1>Lets enjoy your trip with Holiday Hype</h1>
+                    <p><b>Thinking of taking break form your daily boring life and want to have a special quality time with your loved ones?</b></p>
+                    <a class="button" href="suggestionLocation.php">Start Now ></a>
+                </div>
             </div>
+            <div class="content-right"></div>
         </div>
     </div>
 

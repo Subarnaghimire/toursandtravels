@@ -216,7 +216,7 @@
   }
   
   .container .content .content-2 .pack {
-    height: 400px;
+    height: 600px;
     flex: 5;
     overflow-y: scroll;
     border-radius: 10px;

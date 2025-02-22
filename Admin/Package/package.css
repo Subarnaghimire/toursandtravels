@@ -215,7 +215,7 @@ i.fas {
 }
 
 .container .content .content-2 .pack {
-  height: 350px;
+  height: 600px;
   flex: 5;
   overflow-y: scroll;
   border-radius: 10px;

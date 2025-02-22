@@ -104,4 +104,3 @@ function getMonthlyBookings() {
     return mysqli_query($conn, $query);
 }
 ?>
-?>
